@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>SPK Kuota Murah</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <div>
+            <p>Tambah Paket Baru</p>
+            <input v-model.number="kuotaBaru">
+            <input v-model.number="hargaBaru">
+            <button @click="tambahPaket">tambahPaket</button>
+        </div>
+        <div id="paket">
+            <p>Kuota: </p>
+            <ol>
+                <li v-for="paket in pakets">{{paket.kuota}} gb, harga: Rp. {{paket.harga}}</li>
+            </ol>
+        </div>
+        <div id="termurah">
+            <p>Termurah: </p>
+            <ol>
+                <li v-for="paket in hasilUrut">{{paket.kuota}} gb, harga: Rp. {{paket.harga}}</li>
+            </ol>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
