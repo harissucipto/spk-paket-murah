@@ -17,13 +17,13 @@
             <p>Kuota:  <button @click="hapusSemua">Hapus semua paket</button></p>
            
             <ol>
-                <li v-for="paket in pakets">{{paket.kuota}} gb, harga: Rp. {{paket.harga}}</li>
+                <li v-for="(paket, id) in pakets" :key="id">{{paket.kuota}} gb, harga: Rp. {{paket.harga}}</li>
             </ol>
         </div>
         <div id="termurah" v-show="pakets.length">
             <p>Termurah: </p>
             <ol>
-                <li v-for="paket in hasilUrut">{{paket.kuota}} gb, harga: Rp. {{paket.harga}}</li>
+                <li v-for="(paket, id) in hasilUrut" :key="id">{{paket.kuota}} gb, harga: Rp. {{paket.harga}}</li>
             </ol>
         </div>
     </div>
