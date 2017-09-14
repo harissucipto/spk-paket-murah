@@ -12,13 +12,15 @@
             <input v-model.number="hargaBaru">
             <button @click="tambahPaket">tambahPaket</button>
         </div>
-        <div id="paket">
-            <p>Kuota: </p>
+        <div id="paket" v-show="pakets.length">
+            
+            <p>Kuota:  <button @click="hapusSemua">Hapus semua paket</button></p>
+           
             <ol>
                 <li v-for="paket in pakets">{{paket.kuota}} gb, harga: Rp. {{paket.harga}}</li>
             </ol>
         </div>
-        <div id="termurah">
+        <div id="termurah" v-show="pakets.length">
             <p>Termurah: </p>
             <ol>
                 <li v-for="paket in hasilUrut">{{paket.kuota}} gb, harga: Rp. {{paket.harga}}</li>

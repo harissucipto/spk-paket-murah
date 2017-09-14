@@ -36,6 +36,13 @@ var app = new Vue({
                 harga: this.hargaBaru
             }
             this.pakets.push(paketBaru)
+
+            // hapus kembali
+            this.kuotaBaru = 0;
+            this.hargaBaru = 0;
+        },
+        hapusSemua() {
+            this.pakets.splice(0)
         }
     },
     computed: {
