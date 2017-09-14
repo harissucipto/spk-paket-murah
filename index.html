@@ -17,7 +17,7 @@
             <p>Kuota:  <button @click="hapusSemua">Hapus semua paket</button></p>
            
             <ol>
-                <li v-for="(paket, id) in pakets" :key="id">{{paket.kuota}} gb, harga: Rp. {{paket.harga}}</li>
+                <li v-for="(paket, id) in pakets" :key="id">{{paket.kuota}} gb, harga: {{paket.harga | rupiah}}</li>
             </ol>
         </div>
         <div id="termurah" v-show="pakets.length">
