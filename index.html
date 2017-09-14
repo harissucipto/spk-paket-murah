@@ -8,8 +8,8 @@
     <div id="app">
         <div>
             <p>Tambah Paket Baru</p>
-            <input v-model.number="kuotaBaru">
-            <input v-model.number="hargaBaru">
+            <input v-model.number="kuotaBaru" type="number">
+            <input v-model.number="hargaBaru" type="number">
             <button @click="tambahPaket">tambahPaket</button>
         </div>
         <div id="paket" v-show="pakets.length">
