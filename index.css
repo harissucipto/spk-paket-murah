@@ -7,6 +7,7 @@
 
 .tengah {
     text-align: center;
+    padding-bottom: 10px;
 }
 
 input {
@@ -31,4 +32,8 @@ thead {
 tr, td {
     border: 2px solid black;
     padding: 10px;
+}
+
+i {
+    font-size: small;
 }
