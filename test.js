@@ -59,3 +59,23 @@ const rupiah = (uang) => {
 }
 
 console.log(rupiah(3000000000))
+
+
+var numberPattern = /\d+/g;
+
+var b = 'contoh'.match( numberPattern )
+console.log(b === null);
+
+
+function validNumber(number) {
+    var numberPattern = /\d+/g;
+    var hasil = number.match( numberPattern );
+
+    if (hasil !== null) {
+        return Number(hasil.join(''))
+    }
+    return 0;
+}
+
+validNumber('2000.00');
+console.log('oi, mmm');
