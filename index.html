@@ -1,30 +1,73 @@
 <html>
 <head>
     <title>SPK Kuota Murah</title>
+    <link rel="stylesheet" href="index.css">
     <script src="./vue.js"></script>
 </head>
 <body>
 
     <div id="app">
+        <div class="tengah">
+            <h3>SPK Penentu Kuota Paket Murah</h3>
+        </div>
         <div>
-            <p>Tambah Paket Baru</p>
-            <input v-model.number="kuotaBaru" type="number">
-            <input v-model.number="hargaBaru" type="number">
-            <button @click="tambahPaket">tambahPaket</button>
-        </div>
-        <div id="paket" v-show="pakets.length">
-            
-            <p>Kuota:  <button @click="hapusSemua">Hapus semua paket</button></p>
-           
-            <ol>
-                <li v-for="(paket, id) in pakets" :key="id">{{paket.kuota}} gb, harga: {{paket.harga | rupiah}}</li>
-            </ol>
-        </div>
-        <div id="termurah" v-show="pakets.length">
-            <p>Termurah: </p>
-            <ol>
-                <li v-for="(paket, id) in hasilUrut" :key="id">{{paket.kuota}} gb, harga: Rp. {{paket.harga}}</li>
-            </ol>
+            <fieldset>
+                <legend>Tambah Paket</legend>
+                <label>Jumlah Kuota:
+                    <input v-model.number="kuotaBaru" type="number" placeholder="2"> GB
+                </label><br><br>
+                <label>Harga Paket: Rp.
+                    <input v-model.number="hargaBaru" type="number">
+                </label>
+                <br><br>
+                <button class="tambah" @click="tambahPaket">tambahPaket</button>
+            </fieldset>
+            <br>
+
+            <fieldset v-show="pakets.length">
+                <legend>Data Kuota Yang Ditambahkan</legend>
+                <button @click="hapusSemua">Hapus semua paket</button></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>No</td>
+                            <td>Besar Kuota</td>
+                            <td>Harga Paket</td>
+                            <td>Menu</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(paket, id) in pakets" :key="id">
+                            <td>{{id + 1}}</td>
+                            <td>{{paket.kuota}} GB</td>
+                            <td>{{paket.harga | rupiah}}</td>
+                            <td><button @click="hapus(id)">Hapus</button></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </fieldset>
+            <br>
+            <fieldset  v-show="pakets.length">
+                <legend>Hasil SPK (Urutan Kuota Termurah)</legend>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>No</td>
+                            <td>Besar Kuota</td>
+                            <td>Harga Paket</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(paket, id) in hasilUrut" :key="id">
+                            <td>{{id + 1}}</td>
+                            <td>{{paket.kuota}} GB</td>
+                            <td>{{paket.harga | rupiah}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </fieldset>
         </div>
     </div>
 

@@ -2,7 +2,7 @@ Vue.filter('rupiah', function(uang) {
     // bilangan jadi Array dan reverse
     const bilKeArray = bil => String(bil).split('').reverse();
 
-    // const bilangan habis dimod 3 ?
+    // harus bilangan kelipatan 3
     const habisDibagi3 = value => value % 3 === 0
 
     // const sisipkan titik
@@ -61,6 +61,9 @@ var app = new Vue({
         },
         hapusSemua() {
             this.pakets.splice(0)
+        },
+        hapus(id) {
+            this.pakets.splice(id, 1)
         }
     },
     computed: {
