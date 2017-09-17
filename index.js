@@ -11,7 +11,7 @@ Vue.filter('rupiah', function(uang) {
 
     // const sisipkan titik
     var sisipkanTitik = function sisipkanTitik(value) {
-        return value + '.';
+        return value + ',';
     };
 
     // bandingSama
