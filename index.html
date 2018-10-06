@@ -1,15 +1,17 @@
 <html>
+
 <head>
     <title>SPK Kuota Murah</title>
     <link rel="stylesheet" href="index.css">
     <script src="./vue.js" type="text/javascript"></script>
 </head>
+
 <body>
 
     <div id="app">
         <div class="tengah">
             <h3>SPK Penentu Kuota Paket Internet Murah</h3>
-            <i>*harap matikan fitur adblock jika  aplikasi tidak bisa berjalan</i>
+            <i>*harap matikan fitur adblock jika aplikasi tidak bisa berjalan</i>
         </div>
         <div>
             <fieldset>
@@ -49,7 +51,7 @@
                 </table>
             </fieldset>
             <br>
-            <fieldset  v-show="pakets.length">
+            <fieldset v-show="pakets.length">
                 <legend>Hasil SPK (Urutan Kuota Termurah)</legend>
                 <table>
                     <thead>
@@ -74,4 +76,5 @@
 
     <script src="index.js"></script>
 </body>
+
 </html>

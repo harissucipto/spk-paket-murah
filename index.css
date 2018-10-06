@@ -1,39 +1,40 @@
 #app {
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
-    padding: 10px;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .tengah {
-    text-align: center;
-    padding-bottom: 10px;
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 input {
-    width: 100px;
-    margin-left: 5px;
+  width: 100px;
+  margin-left: 5px;
 }
 
 .tambah {
-    text-align: center;
-    margin-left: 90px;
+  text-align: center;
+  margin-left: 90px;
 }
 
 table {
-    border-collapse: collapse;
-    margin-left: 20px;
+  border-collapse: collapse;
+  margin-left: 20px;
 }
 
 thead {
-    text-align: center;
+  text-align: center;
 }
 
-tr, td {
-    border: 2px solid black;
-    padding: 10px;
+tr,
+td {
+  border: 2px solid black;
+  padding: 10px;
 }
 
 i {
-    font-size: small;
+  font-size: small;
 }
